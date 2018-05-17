@@ -78,6 +78,27 @@ export default {
 </script>
 
 <style>
+    .datepicker-range {
+        min-width: 260px !important;
+    }
+    .datepicker>input {
+        border-radius: 4px;
+    }
+
+    .datepicker-range .datepicker-popup {
+        border-radius: 4px;
+    }
+
+    .calendar-date-selected, .calendar-date-selected:hover {
+        border-radius: 4px;
+    }
+    .datepicker__buttons .datepicker__button-cancel {
+        border-radius: 4px;
+    }
+
+    .datepicker__buttons .datepicker__button-select {
+        border-radius: 4px;
+    }
     h1, h2 {
         font-weight: normal;
     }
@@ -91,7 +112,4 @@ export default {
         display: inline-block;
         margin: 0 10px;
     }
-    /*a {*/
-        /*color: #42b983;*/
-    /*}*/
 </style>
