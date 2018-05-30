@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <vue-datepicker-local v-model="range" range-separator=" 至 " show-buttons @confirm="confirmDate" format="YYYY-MM-DD" :disabled-date="disabledDate" />
+        <vue-datepicker-local v-model="range" range-separator=" 至 " show-buttons @confirm="confirmDate" format="YYYY-MM-DD" :disabled-date="disabledDate"/>
     </div>
 </template>
 
@@ -16,11 +16,18 @@ export default {
             range: [this.getDateObj(this.getDateAddOrMinus(-6)), this.getDateObj(this.getDateAddOrMinus(0))]
         }
     },
+    watch: {
+        // range发生变化，这个函数就会执行
+        range () {
+            console.log(this.range)
+        }
+    },
     methods: {
         confirmDate (value) {
             console.log(value)
             console.log(this.getDateStr(value[0]))
             console.log(this.getDateStr(value[1]))
+            console.log(this.range)
         },
         disabledDate (time) {
             return time.getTime() > Date.now()
