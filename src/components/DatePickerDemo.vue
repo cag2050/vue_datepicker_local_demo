@@ -27,7 +27,6 @@ export default {
             console.log(value)
             console.log(this.getDateStr(value[0]))
             console.log(this.getDateStr(value[1]))
-            console.log(this.range)
         },
         disabledDate (time) {
             return time.getTime() > Date.now()
