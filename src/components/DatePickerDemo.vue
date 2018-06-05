@@ -23,13 +23,15 @@ export default {
         }
     },
     methods: {
+        disabledDate (time) {
+            // return time.getTime() > Date.now()
+            let day = time.getDay()
+            return day === 2 || day === 3 || day === 4 || day === 5 || day === 6
+        },
         confirmDate (value) {
             console.log(value)
             console.log(this.getDateStr(value[0]))
             console.log(this.getDateStr(value[1]))
-        },
-        disabledDate (time) {
-            return time.getTime() > Date.now()
         },
         // 返回日期字符串，格式：20170908
         // 参数：日期对象
